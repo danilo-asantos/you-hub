@@ -1,3 +1,7 @@
+.grid{
+    display: grid;
+}
+
 .start{
     display: flex;
     align-items: center;
@@ -28,15 +32,19 @@ body{
     height: 56px;
     width: 100%;
     justify-content: space-between;
-    padding: 0 20px 0 30px;
+    padding: 0 20px 0 18px;
+}
+
+.header .menu-logo{
+    gap: 15px;
 }
 
 .buttons{
-    padding: 8px;
+    padding: 6px;
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 
 .barra-de-pesquisa{
@@ -92,7 +100,14 @@ body{
 
 .button-none-style{
     border: none;
-    background-color: none;
+    background-color: transparent;
+}
+
+.gap-flex{
+    display: flex;
+    gap: 23px;
+    justify-content: center;
+    align-items: center;
 }
 
 #botao-perfil{
@@ -111,4 +126,55 @@ body{
     cursor: pointer;
 }
 
+.container-main{
+    margin: 2% auto;
+    width: 88vw;
+    display: grid;
+    grid-template-areas: 
+    "video-info video-info slider-right";
+    grid-template-columns: autofill, minmax(200px, auto);
+}
 
+.container-main .video-info{
+    grid-area: video-info;
+    grid-template-areas: 
+    "video video video"
+    "title title title"
+    "views views views";
+}
+
+.container-main .video{
+    width: 80em;
+    height: 40em;
+    background-color: #c4c4c4;
+    grid-area: video;
+    border-radius: 5px;
+    border: 1px solid #424242;
+}
+
+.container-main #title{
+    grid-area: title;
+}
+
+.container-main #views{
+    grid-area: views;
+}
+
+.container-main .slider-right{
+    grid-area: slider-right;
+    grid-template-areas: 
+    "advertising advertising advertising"
+    "recommended-video recommended-video recommended-video";
+}
+
+.container-main .slider-right .advertising{
+    width: 270px;
+    height: 56px;
+    background-color: #c4c4c4;
+    grid-area: advertising;
+}
+
+.container-main .slider-right .advertising .recommended-video{
+    grid-area: recommended-video;
+    display: grid;
+}
